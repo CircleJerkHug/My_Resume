@@ -1,0 +1,243 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plasmati Graduate CV
+% LaTeX Template
+% Version 1.0 (24/3/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati (alessandro.plasmati@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template needs to be compiled with XeLaTeX.
+% The main document font is called Fontin and can be downloaded for free
+% from here: http://www.exljbris.com/fontin.html
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper,10pt]{extarticle} % Default font size and paper size
+
+\usepackage{fontspec} % For loading fonts
+\defaultfontfeatures{Mapping=tex-text}
+% \setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin} % Main document font
+% \fontspec{[FontAwesome.otf]}
+\setmainfont[Path = ./Ubuntu/,  %% Optional; but UPDATE this if 
+                         %% your font files are in a folder
+ Extension = .ttf,
+ UprightFont = *-Regular,
+ BoldFont = *-Bold,
+ ItalicFont = *-Italic,
+ SmallCapsFont = *-Medium]
+{Ubuntu}
+\fontspec{[fontawesome-webfont.ttf]}
+
+\usepackage{color}
+\definecolor{primary}{RGB}{107, 16, 86}
+\definecolor{secondary}{RGB}{0, 0, 0}
+
+\usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
+
+\usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
+
+%\usepackage[big]{layaureo} % Margin formatting of the A4 page, an alternative to layaureo can be 
+%\usepackage{fullpage}
+\usepackage{geometry}
+\geometry{a4paper,margin=0.40cm}
+%\geometry{a4paper,left=20mm, top=20mm}
+ %To reduce the height of the top margin uncomment: \addtolength{\voffset}{-1.3cm}
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\definecolor{linkcolour}{rgb}{0,0.4,0.5} % Link color
+% \definecolor{linkcolour}{rgb}{0.3,0.3,0.3} % Link color
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
+
+\usepackage{titlesec} % Used to customize the \section command
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
+\titlespacing{\section}{0pt}{0pt}{0pt} % Spacing around sections
+
+\usepackage{multicol}
+\setlength{\columnsep}{0cm}
+
+\usepackage{tabularx}
+
+\usepackage{textcomp}
+
+\usepackage{fontawesome}
+
+\usepackage{enumitem}
+\setlist[description]{%
+  topsep=10pt,               % space before start / after end of list
+  itemsep=1pt,               % space between items
+%  font={\bfseries\sffamily\color{red}}, % if colour is needed
+}
+
+\def\arraystretch{1}
+\renewcommand{\baselinestretch}{1.1}
+
+\begin{document}
+
+\pagestyle{empty} % Removes page numbering
+
+%\font\fb=''[cmr10]'' % Change the font of the \LaTeX command under the skills section
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+\begin{multicols}{3}
+% \par{\centering\normalsize {\textsc{Undergraduate Student At Indian Institute of Technology, Kharagpur}}\par}\normalsize
+% \par{\centering\normalsize {\textsc{Department of Computer Science and Engineering}}\par}\normalsize
+%\par{{\begin{center}Dual Degree, \emph{Computer Science and Engineering}\end{center}}}
+\normalsize \faGithub\ {\href{https://github.com/CircleJerkHug}{\    CircleJerkHug}}\\
+\normalsize  \faLinkedinSquare\ {\href{https://www.linkedin.com/in/devansh-mishra-b3040453/}{\ Devansh Mishra}}\\
+\columnbreak
+\normalsize\par{\centering{\huge\textsc{\textcolor{primary}{Devansh Mishra}}}\par} % Your name
+\par{\centering\normalsize {\textsc{RP Hall of Residence, IIT Kharagpur    West Bengal, India - 721302}}\hfill\par}
+\columnbreak
+\raggedright\hfill\normalsize \faEnvelope\ {\href{mailto:devansh.prakhar@gmail.com}{\  devansh.prakhar@gmail.com}}\\
+\raggedright\hfill{\faPhone\ \  +91-7317485661}
+\end{multicols}
+\vspace{-0.4 cm}
+% \par{\centering\normalsize {\textit{"It is easier to ask for forgiveness, than permission."}}\hfill\par}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\vspace{-0.4cm}
+\section{\textcolor{primary}{Academics}}
+
+\begin{tabular}{r|p{17.5cm}}	
+\textbf{2017-2022} & \textit{M. Sc (Integrated)} in \textbf{Mathematics and Computing, IIT Kharagpur}\\
+\hfill GPA & \textbf{x.xx}/10.0 (Ongoing)\\
+\textbf{2017} & \textit{Indian School Certificate Examinations}, \textbf{ISC}\\
+\hfill Percentage & \textbf{84.18\%}\\
+\textbf{2015} & \textit{Indian Certificate of Secondary Examination}, \textbf{ICSE}\\
+\hfill Percentage & \textbf{88.18\%} \\
+\end{tabular}
+
+
+%----------------------------------------------------------------------------------------
+%	Projects
+%----------------------------------------------------------------------------------------
+\vspace{-0.3cm}
+\section{\textcolor{primary}{\href{https://www.github.com/CircleJerkHug}{Projects}}}
+\vspace{-0.6cm}
+\begin{tabular}{p{19.7cm}}
+% \fontsize{9}{12}\selectfont{
+\begin{description}[style=nextline, font=$\bullet$\hspace{2mm}\normalsize]
+
+%  \item[{\href{https://github.com/CCExtractor/sample-platform}{Sample-Platform}, Google Summer of Code 2019}] Continuous Integration platform for \href{https://github.com/CCExtractor/ccextractor}{CCExtractor's principal repository}: improved the code sanity checking mechanisms through mypy, dodgy and other tools, increased unit-test coverage from 60.2\% to 90+\%, setup database migration methods, improved file comparison algorithms, implemented parallel running of tasks, {\href{https://github.com/CCExtractor/sample-platform/pulls?utf8=\%E2\%9C\%93&q=is\%3Apr+author\%3Athealphadollar+}{and more}}.
+ 
+ 
+\item[Genetic Algorithm Project]
+ Worked on a project based on Genetic Algorithm under Prof. Nirupam Chakraborty which aims on evolving space direction maps for maze path-finding.
+ 
+\item[{\href{https://github.com/CircleJerkHug/Pygraph}{Pygraph}}] 
+Worked on a project on Object Oriented System Design under Prof. Bodhayan Roy in which we have to visualize the working of graphs on GUI, also we implemented bunch of NP-Complete problems and a NP-Hard problem of Maximum Matching on the graphs. Moreover, we made UML diagrams for the programs to make the code user friendly.
+
+\item[{\href{https://github.com/CircleJerkHug/Artemis-arrow}{Artemis-Arrow}}, KWOC-2018]
+Worked under mentor Koussik Raj KWOC-2018 The project aims at Web Crawling and Web Scraping.A Web App that downloads songs, books and any form of entertainment. It also provides an option to upload the downloaded content to Google Drive. Implemented the part where the program scrapes all the useful information available at "myanime.net" and saves it in JSON file.
+
+\item[{\href{https://github.com/CircleJerkHug/Anime-Downloader}{Anime-Downloader}}]
+Independent web-crawler,web-scraper project made in python using Selenium, Beautiful-Soup and
+Gecko-driver. It prompts the user to input the name, then searches for the anime on web. On finding
+it returns the result to choose form. On the basis of user’s choice an episode list is returned for user
+to choose form. Finally, based on user input it downloads the anime prompting the user in-between to
+select one of the available resolutions.
+ 
+%  \item[Games Using PyGame And Python] Worked on two projects; \href{https://github.com/thealphadollar/AirHockey}{\ AirHockey} and \href{https://github.com/thealphadollar/brkout}{BrkOut}: implementing basic mechanisms of physics programming and graphics development along with elements to cryptography.
+ 
+%  \item[\href{https://github.com/thealphadollar/salvator}{Salvator}: Automated Task of Birthday Wishing]Salvator is a task-automation bot; sends birthday wishes and implements an aesthetic CLI.
+
+%  \item[\href{https://github.com/thealphadollar/send_event_invites}{Send Event Invites}: Sending Invites Using CLI]A CLI tool for sending event invitations to a large number of attendees. The tool has been made in such a manner that it is very easy to add new calendar APIs and use them.
+
+%  \item[Github OpenSource Projects] Worked on a lot of opensource projects: \href{https://github.com/thealphadollar/AirHockey}{\ AirHockey}, \href{https://github.com/thealphadollar/brkout}{BrkOut}, \href{https://github.com/thealphadollar/salvator}{Salvator}, \href{https://github.com/thealphadollar/set_proxy}{Set Proxy} and \href{https://github.com/thealphadollar?tab=repositories}{many more}.
+\end{description}
+% }
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS 
+%----------------------------------------------------------------------------------------
+\vspace{-0.6cm}
+\section{\textcolor{primary}{Technical Skills}}
+
+\begin{tabular}{r|p{15cm}}
+\textsc{Languages} &  Python, C++, Java, R, Haskell \\
+\textsc{Libraries / Frameworks} & Selenium, Networkx, Beautiful-Soup, PyQt5\\
+\textsc{Systems / Platforms} &  Linux, Windows, GitHub, Kaggle \\
+% \textsc{Others} & Unity Game Engine (Boo Script) | Latex | SolidWorks | MATLAB
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	Activities & Leadership
+%----------------------------------------------------------------------------------------
+\vspace{-0.2cm}
+\section{\textcolor{primary}{Scholastic Achievements}}
+
+\begin{itemize}[leftmargin=0.55cm, rightmargin=0.2cm, label={\Large\textbullet}]
+
+\item\textbf{JEE Advanced}: JEE Advanced-Among top 1 percent among 2,00,000 students}
+\item\textbf{JEE Mains}: JEE Main-Among top 1 percent of more then 11,00,000 students}
+\item\textbf{}2 Gold Medals in IMO(SOF). 1 Silver and 2 Bronze medals in Athletics meet at Inter-School Competitions.
+
+
+
+% \item \textbf{Founder, \href{https://www.facebook.com/codestashkgp/}{CodeStash IIT Kharagpur}}: Created a community in my freshman year to promote competitive coding and increase awareness about various fields of computer science (inspiration from code.org).
+
+
+% \item \textbf{Secretary, CodeClub IIT Kharagpur}: Developed and managed website for Bitwise 2018 and \href{http://upai-summit.in/}{up.AI 2018}, West Bengal's largest Artificial Intelligence and Machine-Learning summit.
+\end{itemize}
+
+
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	Technical Interests
+%----------------------------------------------------------------------------------------
+
+\vspace{-0.4cm}
+\section{\textcolor{primary}{Technical Interests}}
+\noindent Machine Learning, Deep Learning, Data Analysis,  Algorithms \\
+
+%----------------------------------------------------------------------------------------
+%	Scholastic Achievements
+%----------------------------------------------------------------------------------------
+
+% \vspace{-0.1cm}
+% \section{\textcolor{primary}{Scholastic Achievements}}
+
+% %\begin{multicols}{2}
+% - \textbf{IITJEE Advanced \emph{AIR 286}:} Under top 0.15\% amongst more than 2,00,000 students \\
+% - \textbf{IITJEE Mains \emph{AIR 2285}:} In top 0.2\% amongst more than 11,00,000 students. \\
+% - \textbf{National Olympiads:} KVPY SA AIR , KVPY SX Scholar, Indian National Physics Olympiad Stage II, Indian National Astronomy Olympiad Stage II, Indian National Chemistry Olympiad Stage II. \\
+% - \textbf{RMSEE \emph{AIR 56}:} Ex-Georgian, Student of Rashtriya Military School Chail, Himanchal Pradesh, India. \\
+%\end{multicols}
+
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	COURSEWORK
+%----------------------------------------------------------------------------------------
+\vspace{-0.2cm}
+\section{\textcolor{primary}{Relevant Coursework}
+\hfill\small\textsc{(T)heory and (L)aboratory}}
+
+\begin{tabular}{r|p{15cm}}
+\textsc{Completed} & Programming And Data Structures (T/L) | Design and Analysis of Algorithms (T/L) | Discrete Mathematics (T) | Probability And Statistics (T) Computer Organization And Architecture (T) | Linear Algebra (T)
+\end{tabular}
+
+% ----------------------------------------------------------------------------------------
+
+\end{document}
