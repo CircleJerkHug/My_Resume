@@ -14,7 +14,7 @@
 %
 % Important note:
 % This template needs to be compiled with XeLaTeX.
-% The main document font is called Fontin and can be downloaded for free
+% The main document font is called and can be downloaded for free
 % from here: http://www.exljbris.com/fontin.html
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -37,7 +37,10 @@
  ItalicFont = *-Italic,
  SmallCapsFont = *-Medium]
 {Ubuntu}
-\fontspec{[fontawesome-webfont.ttf]}
+
+
+\usepackage{fontawesome}
+\newfontfamily{\FA}{FontAwesome}
 
 \usepackage{color}
 \definecolor{primary}{RGB}{107, 16, 86}
@@ -52,11 +55,10 @@
 \usepackage{geometry}
 \geometry{a4paper,margin=0.40cm}
 %\geometry{a4paper,left=20mm, top=20mm}
- %To reduce the height of the top margin uncomment: \addtolength{\voffset}{-1.3cm}
+%To reduce the height of the top margin uncomment: \addtolength{\voffset}{-1.3cm}
 
 \usepackage{hyperref} % Required for adding links	and customizing them
 \definecolor{linkcolour}{rgb}{0,0.4,0.5} % Link color
-% \definecolor{linkcolour}{rgb}{0.3,0.3,0.3} % Link color
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
 
 \usepackage{titlesec} % Used to customize the \section command
@@ -71,6 +73,7 @@
 \usepackage{textcomp}
 
 \usepackage{fontawesome}
+%\newfontfamily{\FA}[Path = Downloads/fontawesome-free-5.12.0-desktop/svgs/brands]{fontawesome-webfont}
 
 \usepackage{enumitem}
 \setlist[description]{%
@@ -92,11 +95,8 @@
 %	NAME AND CONTACT INFORMATION
 %----------------------------------------------------------------------------------------
 \begin{multicols}{3}
-% \par{\centering\normalsize {\textsc{Undergraduate Student At Indian Institute of Technology, Kharagpur}}\par}\normalsize
-% \par{\centering\normalsize {\textsc{Department of Computer Science and Engineering}}\par}\normalsize
-%\par{{\begin{center}Dual Degree, \emph{Computer Science and Engineering}\end{center}}}
-\normalsize \faGithub\ {\href{https://github.com/CircleJerkHug}{\    CircleJerkHug}}\\
-\normalsize  \faLinkedinSquare\ {\href{https://www.linkedin.com/in/devansh-mishra-b3040453/}{\ Devansh Mishra}}\\
+\normalsize \faGithub {\href{https://github.com/CircleJerkHug}{\    CircleJerkHug}}\\
+\normalsize  \faLinkedin\ {\href{https://www.linkedin.com/in/devansh-mishra-b3040453/}{\ Devansh Mishra}}\\
 \columnbreak
 \normalsize\par{\centering{\huge\textsc{\textcolor{primary}{Devansh Mishra}}}\par} % Your name
 \par{\centering\normalsize {\textsc{RP Hall of Residence, IIT Kharagpur    West Bengal, India - 721302}}\hfill\par}
@@ -105,7 +105,6 @@
 \raggedright\hfill{\faPhone\ \  +91-7317485661}
 \end{multicols}
 \vspace{-0.4 cm}
-% \par{\centering\normalsize {\textit{"It is easier to ask for forgiveness, than permission."}}\hfill\par}
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
@@ -124,6 +123,7 @@
 \end{tabular}
 
 
+
 %----------------------------------------------------------------------------------------
 %	Projects
 %----------------------------------------------------------------------------------------
@@ -131,11 +131,8 @@
 \section{\textcolor{primary}{\href{https://www.github.com/CircleJerkHug}{Projects}}}
 \vspace{-0.6cm}
 \begin{tabular}{p{19.7cm}}
-% \fontsize{9}{12}\selectfont{
 \begin{description}[style=nextline, font=$\bullet$\hspace{2mm}\normalsize]
 
-%  \item[{\href{https://github.com/CCExtractor/sample-platform}{Sample-Platform}, Google Summer of Code 2019}] Continuous Integration platform for \href{https://github.com/CCExtractor/ccextractor}{CCExtractor's principal repository}: improved the code sanity checking mechanisms through mypy, dodgy and other tools, increased unit-test coverage from 60.2\% to 90+\%, setup database migration methods, improved file comparison algorithms, implemented parallel running of tasks, {\href{https://github.com/CCExtractor/sample-platform/pulls?utf8=\%E2\%9C\%93&q=is\%3Apr+author\%3Athealphadollar+}{and more}}.
- 
  
 \item[Genetic Algorithm Project]
  Worked on a project based on Genetic Algorithm under Prof. Nirupam Chakraborty which aims on evolving space direction maps for maze path-finding.
@@ -151,18 +148,11 @@ Independent web-crawler,web-scraper project made in python using Selenium, Beaut
 Gecko-driver. It prompts the user to input the name, then searches for the anime on web. On finding
 it returns the result to choose form. On the basis of user’s choice an episode list is returned for user
 to choose form. Finally, based on user input it downloads the anime prompting the user in-between to
-select one of the available resolutions.
+select one of the available resolutions. \vspace
  
-%  \item[Games Using PyGame And Python] Worked on two projects; \href{https://github.com/thealphadollar/AirHockey}{\ AirHockey} and \href{https://github.com/thealphadollar/brkout}{BrkOut}: implementing basic mechanisms of physics programming and graphics development along with elements to cryptography.
- 
-%  \item[\href{https://github.com/thealphadollar/salvator}{Salvator}: Automated Task of Birthday Wishing]Salvator is a task-automation bot; sends birthday wishes and implements an aesthetic CLI.
-
-%  \item[\href{https://github.com/thealphadollar/send_event_invites}{Send Event Invites}: Sending Invites Using CLI]A CLI tool for sending event invitations to a large number of attendees. The tool has been made in such a manner that it is very easy to add new calendar APIs and use them.
-
-%  \item[Github OpenSource Projects] Worked on a lot of opensource projects: \href{https://github.com/thealphadollar/AirHockey}{\ AirHockey}, \href{https://github.com/thealphadollar/brkout}{BrkOut}, \href{https://github.com/thealphadollar/salvator}{Salvator}, \href{https://github.com/thealphadollar/set_proxy}{Set Proxy} and \href{https://github.com/thealphadollar?tab=repositories}{many more}.
 \end{description}
-% }
 \end{tabular}
+\vspace{0.4cm}
 
 %----------------------------------------------------------------------------------------
 %	SKILLS 
@@ -176,28 +166,21 @@ select one of the available resolutions.
 \textsc{Systems / Platforms} &  Linux, Windows, GitHub, Kaggle \\
 % \textsc{Others} & Unity Game Engine (Boo Script) | Latex | SolidWorks | MATLAB
 \end{tabular}
+\vspace{0.4cm}
+
+
 
 %----------------------------------------------------------------------------------------
-%	Activities & Leadership
+%	COURSEWORK
 %----------------------------------------------------------------------------------------
 \vspace{-0.2cm}
-\section{\textcolor{primary}{Scholastic Achievements}}
+\section{\textcolor{primary}{Relevant Coursework}
+\hfill\small\textsc{(T)heory and (L)aboratory}}
 
-\begin{itemize}[leftmargin=0.55cm, rightmargin=0.2cm, label={\Large\textbullet}]
-
-\item\textbf{JEE Advanced}: JEE Advanced-Among top 1 percent among 2,00,000 students}
-\item\textbf{JEE Mains}: JEE Main-Among top 1 percent of more then 11,00,000 students}
-\item\textbf{}2 Gold Medals in IMO(SOF). 1 Silver and 2 Bronze medals in Athletics meet at Inter-School Competitions.
-
-
-
-% \item \textbf{Founder, \href{https://www.facebook.com/codestashkgp/}{CodeStash IIT Kharagpur}}: Created a community in my freshman year to promote competitive coding and increase awareness about various fields of computer science (inspiration from code.org).
-
-
-% \item \textbf{Secretary, CodeClub IIT Kharagpur}: Developed and managed website for Bitwise 2018 and \href{http://upai-summit.in/}{up.AI 2018}, West Bengal's largest Artificial Intelligence and Machine-Learning summit.
-\end{itemize}
-
-
+\begin{tabular}{r|p{15cm}}
+\textsc{Completed} & Programming And Data Structures (T/L) | Design and Analysis of Algorithms (T/L) | Discrete Mathematics (T) | Probability And Statistics (T) Computer Organization And Architecture (T) | Linear Algebra (T) \\
+\end{tabular}
+\vspace{0.4cm}
 
 
 
@@ -210,34 +193,25 @@ select one of the available resolutions.
 \vspace{-0.4cm}
 \section{\textcolor{primary}{Technical Interests}}
 \noindent Machine Learning, Deep Learning, Data Analysis,  Algorithms \\
+\vspace{0.4cm}
 
-%----------------------------------------------------------------------------------------
-%	Scholastic Achievements
-%----------------------------------------------------------------------------------------
 
-% \vspace{-0.1cm}
-% \section{\textcolor{primary}{Scholastic Achievements}}
-
-% %\begin{multicols}{2}
-% - \textbf{IITJEE Advanced \emph{AIR 286}:} Under top 0.15\% amongst more than 2,00,000 students \\
-% - \textbf{IITJEE Mains \emph{AIR 2285}:} In top 0.2\% amongst more than 11,00,000 students. \\
-% - \textbf{National Olympiads:} KVPY SA AIR , KVPY SX Scholar, Indian National Physics Olympiad Stage II, Indian National Astronomy Olympiad Stage II, Indian National Chemistry Olympiad Stage II. \\
-% - \textbf{RMSEE \emph{AIR 56}:} Ex-Georgian, Student of Rashtriya Military School Chail, Himanchal Pradesh, India. \\
-%\end{multicols}
-
-%----------------------------------------------------------------------------------------
-
-%----------------------------------------------------------------------------------------
-%	COURSEWORK
-%----------------------------------------------------------------------------------------
-\vspace{-0.2cm}
-\section{\textcolor{primary}{Relevant Coursework}
-\hfill\small\textsc{(T)heory and (L)aboratory}}
-
-\begin{tabular}{r|p{15cm}}
-\textsc{Completed} & Programming And Data Structures (T/L) | Design and Analysis of Algorithms (T/L) | Discrete Mathematics (T) | Probability And Statistics (T) Computer Organization And Architecture (T) | Linear Algebra (T)
-\end{tabular}
 
 % ----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	Activities & Leadership
+%----------------------------------------------------------------------------------------
+\vspace{-0.2cm}
+\section{\textcolor{primary}{Scholastic Achievements}}
+
+\begin{itemize}[leftmargin=0.55cm, rightmargin=0.2cm, label={\Large\textbullet}]
+
+\item\textbf{JEE Advanced}: {JEE Advanced-Among top 1 percent among 2,00,000 students}
+\item\textbf{JEE Mains}: {JEE Main-Among top 1 percent of more then 11,00,000 students}
+\item\textbf{}2 Gold Medals in IMO(SOF). 1 Silver and 2 Bronze medals in Athletics meet at Inter-School Competitions. 
+\end{itemize}
+\vspace{0.4cm}
+
 
 \end{document}
